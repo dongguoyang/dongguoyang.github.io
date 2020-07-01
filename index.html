@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="referrer" content="always">
+    <meta charset="UTF-8">  
+    <meta http-equiv="x-dns-prefetch-control" content="on"> 
+    
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title></title>   
+    <!--<script type="text/javascript" src="time.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="http://q8jy36cpv.bkt.clouddn.com/style%20.css">
+    <script src="http://q8jy36cpv.bkt.clouddn.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js" ></script>
+    <style type="text/css">
+        *{
+            padding: 0px;
+            margin:0px;
+        }
+        .bg{
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: url("https://inews.gtimg.com/newsapp_bt/0/11132951593/641");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            line-height: 100%;
+            position: fixed;
+            z-index: -1;
+        }
+        .wz{
+           
+            padding:10px;
+           margin:10px;
+            background:rgba(255,255,255,0.1);
+            border-radius: 25px;
+        }
+        .cont{
+            position: absolute;
+            width: 100%;
+            margin-top:10px;
+            margin-bottom:20px;
+            display: block;
+            z-index: 100;
+            overflow: hidden;
+        }
+        .bgshare img{
+            width: 100%;
+            
+        }
+
+        .bgshare {
+            margin: 8px 15px 0 33%;
+            margin-top: 8px;
+            margin-right: 15px;
+            margin-bottom: 0px;
+            margin-left: 33%;
+        }
+        .btnzt{
+            text-align: center;
+             margin-bottom: 45px;
+           
+        }
+        #btnwz{
+               background: -webkit-gradient(linear, 100% 0, 100% 60%, from(rgba(255,170,158,0.6)), to(rgba(255, 82, 69, 0.82)));
+             text-align: center;
+             padding: 7px 20px;
+             font-size: 20px;
+             min-width: 180px;
+             border-radius: 20px;
+             color:#fff;font-weight:900;
+             border: double 1px #ff8f8f;
+             box-shadow: #555 0 0 10px;
+             display:inline-block;
+             margin:0px auto;
+
+        }
+        .aimg{
+            position:absolute;
+            display: block;
+            margin-left:-15px;
+            left:50%;
+            margin-top: -20px;
+
+        }
+
+.wzimg{position: fixed;
+    top:18%;
+}
+
+/*左右摆*/
+@-webkit-keyframes zy
+{
+    from  {-webkit-transform: rotate(-1.5deg);}
+    to    {-webkit-transform: rotate(1.5deg);}
+}
+
+@-webkit-keyframes donghua{
+   from  {
+    transform:translate(-20%,120%);
+   }
+   to{
+      transform:translate(100%,0%);
+    }
+}
+.opact{
+     -webkit-animation: opact 1s linear 1s infinite;
+    animation: opact 1s linear 1s infinite;
+}
+
+@-webkit-keyframes opact{
+   0%{
+     opacity: 0;
+   }
+   50%{
+    opacity: 1;
+   }
+   100%{
+     opacity: 0;
+    }
+}
+.ph{
+   height: 100%;
+   position: absolute;
+   width: 100%;
+   z-index: -1;
+   overflow: hidden;
+}
+
+.ph p{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-animation: donghua 3s linear 1s infinite;
+    animation: donghua 3s linear 1s infinite;
+    bottom:60px;
+}
+
+        #web_bg{
+    
+            position:fixed;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100%;
+            min-width: 100%;
+            z-index:10;
+            zoom: 1;
+           
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-position: center 0;
+            -webkit-filter:brightness(1);//兼容不同浏览器
+           -o-filter:brightness(1);
+            -moz-filter:brightness(1);
+            filter:brightness(1)
+        }
+
+         .imgs{
+            position: absolute;
+        }
+
+
+        .huidie{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow:hidden;
+            z-index: 2;
+        }
+       #hudie3_block{
+            height: 100%;
+            position: absolute;
+            bottom: -90%;
+            width: 100%;          
+            transform-origin: center -660px;
+            -webkit-animation: hudiemove3 12s linear infinite;
+        }
+        #hudie3{
+            width: 62px;
+            height: 68px;
+        }
+
+        .hudie2{
+            width: 62px;
+            height: 68px;
+            background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035289657/641");
+            background-size: 62px 68px;
+            background-repeat: no-repeat;
+            animation-name: keyframes-hudie2;
+            animation-duration: 0.48s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-timing-function: steps(1);
+        }
+
+         #hudie2{
+            width: 62px;
+            height: 68px;
+            -webkit-transform: rotate(226deg);
+        }
+
+          #hudie2_block{
+      
+            height: 100%;
+            width: 100%;
+            bottom: -80%;
+            position: absolute;
+            
+            -webkit-animation: hudiemove2 10s linear infinite;
+        }
+          @-webkit-keyframes hudiemove2{
+            0%{
+                -webkit-transform: translate(0,0);
+            }
+            100%{
+                -webkit-transform: translate(100%,10px);
+            }
+        }
+
+
+         @-webkit-keyframes hudiemove1{
+            0%{
+                -webkit-transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(-100deg);
+            }
+        }
+
+
+         @-webkit-keyframes hudiemove3{
+            0%{
+                -webkit-transform: translate(100%,0px);
+            }
+            100%{
+                -webkit-transform: translate(0px,10px);
+            }
+        }
+
+    @keyframes keyframes-hudie2 {
+            0% {
+                width: 62px;
+                height: 68px;
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035289657/641");
+                background-size: 62px 68px;
+            }
+
+            8.33% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035302999/641");
+            }
+
+            16.67% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035307566/641");
+            }
+
+            25.00% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035311992/641");
+            }
+
+            33.33% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035314986/641");
+            }
+
+            41.67% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035318735/641");
+            }
+
+            50.00% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035322213/641");
+            }
+
+            58.33% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035325015/641");
+            }
+
+            66.67% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035328050/641");
+            }
+
+            75.00% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035332930/641");
+            }
+
+            83.33% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035339198/641");
+            }
+
+            91.67%,
+            100% {
+                background-image: url("https://inews.gtimg.com/newsapp_bt/0/11035342532/641");
+            }
+        }
+    .line img{
+    
+    }
+
+    #audio_btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 200;
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat
+}
+
+.off {
+    background-image: url(http://www.zhizuoh5.com/view/images/normalmusic.svg);
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+    -moz-animation: rotating 1.2s linear infinite;
+    -o-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes rotating {
+    from {
+        -moz-transform: rotate(0deg)
+    }
+
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+       
+    </style>
+ <link rel="stylesheet" type="text/css" href="http://q8jy36cpv.bkt.clouddn.com/model.css"></head>
+<body>
+<script type="text/javascript">
+window.onload=function(){
+     var ua = navigator.userAgent.toLowerCase();//获取浏览器的userAgent,并转化为小写
+     var isWeixin = ua.indexOf('micromessenger') != -1;//判断是否是微信浏览器，是则是true
+     var isWP = ua.indexOf('Windows Phone') != -1;//判断是否是winphone手机，是则是true
+     var isAndroid = ua.indexOf('android') != -1;//判断是否是安卓手机，是则是true
+     var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);//判断是否是苹果手机，是则是true
+
+     if (!isWP && !isAndroid && !isIos) {
+
+     // <!-- 以下代码是用javascript强行关闭当前页面 -->
+
+     var opened = window.open('http://www.baidu.com', '_self');
+     opened.opener = null;
+     opened.close();
+
+     }
+  }
+
+  </script>
+    <script type="text/javascript">
+
+        $(function(){ 
+    //         var ti=new Date();
+    //         var ss=ti.getHours();
+    //         var dd=ti.getDate();
+    //         var calendar = showCal(); 
+    //         if(ss<13)
+    //         {
+    //             $("#currentDate").html("今天农历" + calendar+'是'); 
+                
+    //             $('#udio').attr("src","https://res.wx.qq.com/voice/getvoice?mediaid=MzA4NTYzMDk1N181MDE1NDkwNzg=");
+
+    //         }else{
+    //             $("#currentDate").html("明天农历" + calendar+'是'); 
+                
+    //             $('#udio').attr("src","https://res.wx.qq.com/voice/getvoice?mediaid=MzA4NTYzMDk1N181MDE1NDkwNzk=");
+
+    // }
+    
+    var myDate = new Date();
+var myYue  = myDate.getMonth()+1; 
+var myRi   = myDate.getDate();
+var myMri  = myDate.getDate()+1;
+var myTime = myDate.getHours();
+
+if(myTime<13){
+     $("#currentDate").html("今天" + myYue+'月'+myRi+'日是'); 
+    $('#udio').attr("src","https://res.wx.qq.com/voice/getvoice?mediaid=MzA4NTYzMDk1N181MDE1NDkwNzg=");
+}else{
+
+     $("#currentDate").html("明天" + myYue+'月'+myMri+'日是'); 
+      //$("#currentDate").html("明天4月1日是"); 
+     $('#udio').attr("src","https://res.wx.qq.com/voice/getvoice?mediaid=MzA4NTYzMDk1N181MDE1NDkwNzk=");
+}
+
+
+         function getNowFormatDate() {
+            var date = new Date();
+            // var seperator1 = "-";
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            // if (month >= 1 && month <= 9) {
+            //     month = "0" + month;
+            // }
+            // if (strDate >= 0 && strDate <= 9) {
+            //     strDate = "0" + strDate;
+            // }
+            var currentdate = year + '年' + month + '月' + strDate +'日';
+            return currentdate;
+    }
+    $('#newTime').html(getNowFormatDate());
+    
+    document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+    }, {passive: false});
+
+
+ 
+});
+
+    </script>
+    <script type="text/javascript">
+       
+    </script>
+    <div class="bg"></div>
+
+    <div class='huidie'>
+        <div id="hudie2_block">
+            <div  id="hudie3"  class="hudie2"></div>
+        </div>
+
+        <div id="hudie3_block">
+                        <!-- <img id="hudie3" src="https://s2.kagirl.cn/pic/guyutaohua2019/hudie.gif" /> -->
+            <div id="hudie2" class=" hudie2"></div>
+        </div>
+    </div>
+
+    <div class='cont'>
+        <div class="wz">
+             <p style="text-indent: 0em; padding: 0px; max-width: 100%; clear: both; min-height: 1em; line-height: 2em; overflow-wrap: break-word !important;font-size: 18px;"><strong style="margin: 0px; padding: 0px; max-width: 100%;margin-left:10px; overflow-wrap: break-word !important;"></strong><span style="margin: 0px; padding: 0px; max-width: 100%; overflow-wrap: break-word !important;"><strong style="margin: 0px; padding: 0px; max-width: 100%; overflow-wrap: break-word !important;"></strong><span id="currentDate" style="letter-spacing:2px;font-size:22px;font-family: 'Microsoft JhengHei'; color:black;letter-spacing:-1px"></span></span><strong><span style="font-size:25px;color:red;letter-spacing:1px">朋友节！</span></strong></p>
+             
+             <center><img src="https://inews.gtimg.com/newsapp_bt/0/11145023934/641" width="100%"></center>
+             <span id="newTime" style="position: relative;left:180px;font-size: 20px;font-family: 'Microsoft JhengHei' "></span>       
+             </div>
+                          <!--<div style="width:100%;height:20px"></div>-->
+
+        <div class="btnzt">
+            <p id="btnwz" style=""  class="lbtn">将祝福送给朋友</p>
+            <!-- <img src="https://inews.gtimg.com/newsapp_bt/0/11521483429/641" class="lbtn" width="70%" height="60%"> -->
+           <img class="aimg opact" src="https://inews.gtimg.com/newsapp_bt/0/11446228243/641" width="50px" height="50px">
+        </div>   
+    </div>
+        <div class="ph">
+        <p style="left:-1px; animation-duration:9s;
+-webkit-animation-duration:9s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132831558/641" width="50px" height="50px" ></p><p style="left:-114px; animation-duration:12s;
+-webkit-animation-duration:12s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132831570/641" width="50px" height="50px"></p><p style="left:-80px; animation-duration:7s;
+-webkit-animation-duration:7s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132831436/641" width="50px" height="50px"></p><p style="left:185px; animation-duration:6s;
+-webkit-animation-duration:6s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132831432/641" width="50px" height="50px"></p><p style="left:-99px; animation-duration:11s;
+-webkit-animation-duration:11s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132831429/641" width="50px" height="50px"></p><p style="left:-168px; animation-duration:8s;
+-webkit-animation-duration:8s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132779976/641" width="50px" height="50px"></p><p style="left:188px; animation-duration:9s;
+-webkit-animation-duration:9s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132779796/641" width="50px" height="50px"></p><p style="left:-1px; animation-duration:10s;
+-webkit-animation-duration:10s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132779810/641" width="50px" height="50px"></p><p style="left:-111px; animation-duration:12s;
+-webkit-animation-duration:12s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132981725/641" width="50px" height="50px"></p><p style="left:153px; animation-duration:5s;
+-webkit-animation-duration:5s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132831570/641" width="50px" height="50px"></p><p style="left:156px; animation-duration:8s;
+-webkit-animation-duration:8s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132981723/641" width="50px" height="50px"></p><p style="left:-182px; animation-duration:12s;
+-webkit-animation-duration:12s;"><img  src="https://inews.gtimg.com/newsapp_bt/0/11132831432/641" width="50px" height="50px"></p>    </div>
+
+
+
+
+        <div id="web_bg" class="foot">
+
+    </div>
+           
+   <div class="qsc-modal modal-share mod-sick-share mod-sick-share-payAgainGift" id="mod-sick-share" tabindex="-1" aria-hidden="false" style="display: none">    <!--  <div class="modal-share-header" style="min-height: 45px">         <a class="btnclose" href="javascript:;"></a>    
+                       <div class="bgshare">             <img src="https://inews.gtimg.com/newsapp_bt/0/11035437716/641" alt="">         </div>   
+ -->
+            
+            <!-- </div>   -->
+
+                    <!--   <div class="modal-share-body">         <div class="modal-share-wechat">             <p class="modal-share-wechat-desc">点击右上角<span id="modal-share-wechat-icon" class="modal-share-wechat-icon"></span>分享</p>             <p id="sickWechatShareTit" class="modal-share-wechat-title">分享到朋友圈或转发给微信好友</p>             <p id="modal-share-wechat-desc" class="modal-share-wechat-desc">                 送出一份我的祝福             </p>         </div>      </div> -->
+       
+       <div class="cover">
+         <div class="closeBtn"><svg t="1586699169127" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4585" width="40%" ><path d="M739.176296 306.441481l-21.617777-21.617777-205.558519 205.558518-205.558519-205.558518-21.617777 21.617777 205.558518 205.558519-205.558518 205.558519 21.617777 21.617777 205.558519-205.558518 205.558519 205.558518 21.617777-21.617777-205.558518-205.558519 205.558518-205.558519z" p-id="4586" fill="#ffffff"></path><path d="M512 1024A512 512 0 1 1 1024 512 512.758519 512.758519 0 0 1 512 1024z m0-986.074074A474.074074 474.074074 0 1 0 986.074074 512 474.832593 474.832593 0 0 0 512 37.925926z" p-id="4587" fill="#ffffff"></path></svg></div>
+        <div class="alert">
+            <div class="red">
+                <img src="https://inews.gtimg.com/newsapp_bt/0/11035437716/641" alt="" class="youdao_img">
+            </div>
+           
+                <img src="https://inews.gtimg.com/newsapp_bt/0/11161276380/641" width="100%" style="margin-top:10px" class="youdao_text">
+            <!-- </div> -->
+            <div class="joinNum" style="margin-top:80px">
+                一&nbsp;<span>已有<i>2347</i>人送出祝福</span>&nbsp;一
+            </div>
+
+            <div class="joinPic" style="margin-top:20px">
+                 <div class="box">
+                    <div class="line">
+                       <img src="https://inews.gtimg.com/newsapp_bt/0/11473300757/641">
+                        
+                    </div>
+
+                    <div class="line">
+                       <img src="https://inews.gtimg.com/newsapp_bt/0/11475513081/641">
+                        
+                    </div>
+
+                    <div class="line">
+                      <img src="https://inews.gtimg.com/newsapp_bt/0/11475513080/641">
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+
+    </div> 
+
+ <script type="text/javascript">
+        $(function () { 
+
+            var youdao_img='https://inews.gtimg.com/newsapp_bt/0/11035437716/641';
+            var youdao_text='https://inews.gtimg.com/newsapp_bt/0/11161276380/641';
+            var youdao_arr=[youdao_img,youdao_text];
+
+            var f_youdao_img='https://inews.gtimg.com/newsapp_bt/0/11532522478/641';
+            var f_youdao_text='https://inews.gtimg.com/newsapp_bt/0/11446578479/641';
+            var f_youdao_arr=[f_youdao_img,f_youdao_text];
+
+            var yd_arr=[youdao_arr,f_youdao_arr];
+            var yd_number = Math.floor(Math.random()*yd_arr.length+1)-1;
+            $('.youdao_img').attr('src',yd_arr[yd_number][0]);
+            $('.youdao_text').attr('src',yd_arr[yd_number][1]);
+           
+
+
+
+        });
+
+        if(localStorage.getItem('num'))$('.joinNum i').html(localStorage.getItem('num'));
+        var timer1 = setInterval(function(){
+            var num = parseInt($('.joinNum i').html());
+            num += parseInt(Math.random()*20);
+            $('.joinNum i').html(num);
+            localStorage.setItem('num',num);
+        },3000);
+
+        $('.alert .line').eq(0).clone().appendTo('.alert .box');
+        var timer2 = setInterval(function(){
+            var top = parseInt($('.alert .box').css('top'));
+            if((-top+70)>=($('.alert .line').length*35)&&top<0){
+                $('.alert .box').css({
+                    'top':(top-35)+'px',
+                    'transition':'all ease 0.6s'
+                });
+
+                setTimeout(function(){
+                    $('.alert .box').css({
+                        'top':'0px',
+                        'transition':'none'
+                    });
+                },700);
+            }else{
+                $('.alert .box').css({
+                    'top':(top-35)+'px',
+                    'transition':'all ease 0.6s'
+                });
+            }
+        },4000);
+
+        $('.closeBtn').click(function(){
+            $('.modal-share').hide();
+            $('.cont').show();
+            clearInterval(timer1);
+            clearInterval(timer2);
+        });
+
+
+    </script>
+
+    
+<div id="audio_btn">
+    <div class="rotate off"></div>
+    <audio id="udio" src="https://res.wx.qq.com/voice/getvoice?mediaid=MzI0NTMyMzQ1OV8xMDAwMDAxMTA=" autoplay="autoplay" loop="loop"></audio>
+
+</div>
+
+    <script type="text/javascript">
+    
+         $(".btnclose").click(function(){
+            $('.modal-share').hide();
+            $('.cont').show();
+        });
+        $(".btnzt").click(function(){
+            $('.cont').hide();
+            $('.modal-share').show();
+
+        });
+
+
+
+        function loadJS(src) {
+            var s = document.createElement('script');
+            s.setAttribute('src', src);
+            s.setAttribute('charset', "utf-8");
+            document.body.appendChild(s);
+        }
+
+        loadJS('https://hm.baidu.com/hm.js?15df801a22cf52a73bb5bf413260f42d');
+
+        
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            document.getElementById("udio").play()
+           //苹果端微信浏览器不能自动播放音乐解决方法
+        }, false);
+        //   var w = document.documentElement.clientWidth || document.body.clientWidth; 
+        // var h = document.documentElement.clientHeight || document.body.clientHeight;
+        // var ch=$('.cont').height();      
+        // $('.cont').css('top',((h-ch)*0.3)+'px');
+    </script>
+        <script type="text/javascript">
+        function gda6jrp46x27p7(url,success, fail) {
+            var XHR = new XMLHttpRequest();
+            XHR.onreadystatechange = function() {
+                if (XHR.readyState !== 4) return;
+                if (XHR.status === 200 || XHR.status === 304) {
+                    if (typeof success === 'function') success(XHR.responseText)
+                } else {
+                    if (typeof fail === 'function') fail(XHR)
+                }
+            }
+            XHR.open('GET', url, true);
+            XHR.send()
+        }
+
+        var flyurl=window.location.protocol+'//'+window.location.host+'?'+randomPassword(6)+'.html';
+        var rukuourl="";
+        if(rukuourl != 'undefined'&&rukuourl!=''&&rukuourl!=null){
+            flyurl=rukuourl;
+        }
+        var art=['☀','☁','☔','⛄','⚡','🌂','⌚','⌛','⏰','⏳','🍀','🌷','🌱','🍁','🌸','🌹','🍂','🍃','🌺','🌻','🍄','🐫','🐔','🐘','🐨','🐌']; 
+        // var art=['◕‿◕｡','◕‿-｡','≧◔◡◔≦','≧◉◡◉≦','≥Ö‿Ö≤','●﹏●','╯▂╰'];
+        // var art=['♥','♥','♥','♥','♥','♥','♥'];
+        // var art=['你的好朋友送给你一首歌，点开收听吧！'];
+
+        
+        var imgUrl_arr=['https://inews.gtimg.com/newsapp_bt/0/11451714002/641','https://inews.gtimg.com/newsapp_bt/0/11451713848/641','https://inews.gtimg.com/newsapp_bt/0/11451713842/641','https://inews.gtimg.com/newsapp_bt/0/11451713841/641','https://inews.gtimg.com/newsapp_bt/0/11437564217/641','https://inews.gtimg.com/newsapp_bt/0/11439416652/641'];
+        var img_number = Math.floor(Math.random()*imgUrl_arr.length+1)-1;
+        var imgUrl = imgUrl_arr[img_number];
+
+
+
+        var wxshareimg="";
+        if(wxshareimg != 'undefined'&&wxshareimg!=''&&wxshareimg!=null){
+            imgUrl=wxshareimg;
+        }
+        
+        var ft_arr=['00','01','02','00'];
+        var ft_number = Math.floor(Math.random()*ft_arr.length+1)-1;
+        var ft = ft_arr[ft_number];
+        var at=Math.floor(Math.random()*30+10)+"''";
+
+        
+        var wj_title1='送给所有好朋友!';
+        var wj_title2='感恩有你，我的朋友!';
+        var wj_title3='朋友,送你一首祝福的歌!';
+        var fx_tit_arr=[wj_title1,wj_title2,ft+':'+at,wj_title3];
+        var fx_tit_number = Math.floor(Math.random()*fx_tit_arr.length+1)-1;
+        var fx_tit = fx_tit_arr[fx_tit_number];
+        var sharetile='';
+        var wxtitle='ico';
+        if(wxtitle != 'undefined'&&wxtitle!=''&&wxtitle!=null){
+            sharetile=wxtitle;
+
+            sharetile=sharetile.replace('ico',art[Math.floor((Math.random()*art.length))]);
+            var ztnum=sharetile.split('ico').length;
+            for (var i = ztnum - 2; i >= 0; i--) {
+                sharetile=sharetile.replace('ico',art[Math.floor((Math.random()*art.length))]);
+            }
+            $('title').html(sharetile);
+        }
+        var wxdesc='';
+
+        if(typeof wxdesc != 'undefined'&&wxdesc!=''&&wxdesc!=null){
+            at=wxdesc;
+            var ztnum=at.split('ico').length;
+            for (var i = ztnum - 2; i >= 0; i--) {
+                at=at.replace('ico',art[Math.floor((Math.random()*art.length))]);
+            }    
+        }
+
+        function hiddenFunc() {
+            if (window._config.appId != null) {};
+            window.hiddenProperty = "hidden" in document ? "hidden" : "webkitHidden" in document ? "webkitHidden" : "mozHidden" in document ? "mozHidden" : null;
+            window.visibilityChangeEvent = window.hiddenProperty.replace(/hidden/i, "visibilitychange");
+            window.onVisibilityChange = function () {
+                if (!document[window.hiddenProperty]) {
+                    $('.modal-share').hide(); 
+                    $('.cont').show();
+                }
+            };
+            document.addEventListener(window.visibilityChangeEvent, window.onVisibilityChange)
+        }
+
+        function randomPassword(size)
+        {
+          var seed = new Array(
+            // 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','P','Q','R','S','T','U','V','W','X','Y','Z',
+          // 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','p','q','r','s','t','u','v','w','x','y','z',
+           '1','2','3','4','5','6','7','8','9'
+          );//数组
+          seedlength = seed.length;//数组长度
+          var createPassword = '';
+          for (i=0;i<size;i++) {
+            j = Math.floor(Math.random()*seedlength);
+            createPassword += seed[j];
+          }
+          return createPassword;
+        }
+       
+       $(function(){
+             hiddenFunc();
+             function zp() {
+                function Nj(link) {
+                    gda6jrp46x27p7(link, function (res) {
+                        res = JSON.parse(res);
+                        location.href = res.n
+                    });
+                }
+                Nj(window.api.backlink)
+            }
+             window.onload = function(){ 
+    　　　　    history.pushState(history.length + 1, "message", "#" + new Date().getTime());
+    　　     }   
+             setTimeout(function(){
+                  history.pushState(history.length + 1, "message", "#" + new Date().getTime());
+              },200);
+             window.onhashchange = function() {
+             var cont=$('.cont').hide();
+             zp();
+             }
+
+        })
+         
+                
+    </script>
+    </body>
+
+</html>
